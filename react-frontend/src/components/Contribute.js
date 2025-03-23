@@ -1,41 +1,4 @@
-// import React, { useState } from "react";
 
-// const Contribute = () => {
-//   const [formData, setFormData] = useState({ latitude: "", longitude: "", signalStrength: "", notes: "" });
-
-//   const getLocation = () => {
-//     navigator.geolocation.getCurrentPosition(
-//       (pos) => setFormData({ ...formData, latitude: pos.coords.latitude, longitude: pos.coords.longitude }),
-//       (err) => alert("Geolocation error: " + err.message)
-//     );
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const res = await fetch("http://localhost:5000/api/contribute", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(formData),
-//     });
-//     if (res.ok) alert("Data submitted!");
-//   };
-
-//   return (
-//     <div>
-//       <h2>Contribute Data</h2>
-//       <button onClick={getLocation}>Get My Location</button>
-//       <form onSubmit={handleSubmit}>
-//         <input type="text" name="latitude" value={formData.latitude} placeholder="Latitude" readOnly />
-//         <input type="text" name="longitude" value={formData.longitude} placeholder="Longitude" readOnly />
-//         <input type="number" name="signalStrength" placeholder="Signal Strength" onChange={(e) => setFormData({ ...formData, signalStrength: e.target.value })} />
-//         <textarea name="notes" placeholder="Notes" onChange={(e) => setFormData({ ...formData, notes: e.target.value })}></textarea>
-//         <button type="submit">Submit</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Contribute;
 import React, { useState } from "react";
 
 const ContributeData = () => {
